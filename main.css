@@ -3,3 +3,50 @@ footer {
     text-align: center;
 
 }
+
+nav {
+    background-color: white;
+    padding: 10px 0;
+    float: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+nav ul li {
+    display: inline;
+  }
+
+.container p {
+    display: flex;
+    align-items:center;
+    margin-left:50px;
+
+}
+
+.container img {
+    margin-right: 20px; 
+    align-items: center;
+}
+
+
+.container1 {
+    margin-left:50px;
+}
+
+
+.container1 del {
+    margin-left:15px;
+}
+
+.message {
+    width:200px;
+}
+
+
+h1 {
+    text-align: center;
+}
