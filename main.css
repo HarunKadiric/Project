@@ -21,15 +21,21 @@ nav ul li {
   }
 
 .container p {
-    display: flex;
+    display: block;
     align-items:center;
     margin-left:50px;
 
 }
 
 .container img {
+    display:block;
     margin-right: 20px; 
     align-items: center;
+}
+
+.galerija{
+    display:flex;
+    justify-content: space-between;
 }
 
 
@@ -42,9 +48,6 @@ nav ul li {
     margin-left:15px;
 }
 
-.message {
-    width:200px;
-}
 
 
 h1 {
