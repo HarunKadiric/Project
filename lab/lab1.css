@@ -1,0 +1,33 @@
+
+.logo{
+    float:left;
+}
+.navp{
+    float:right;
+}
+
+.container{
+    background-color: #AF804F;
+}
+
+.galerija{
+    display:inline-block;
+    align-items: center;
+}
+
+.galerija p{
+    display: block;
+    align-items:center;
+    margin-left:50px;
+
+}
+
+
+h1{
+    font-family:'Times New Roman', Times, serif;
+    text-align:left;
+}
+
+.i2{
+    margin-top:125px;
+}

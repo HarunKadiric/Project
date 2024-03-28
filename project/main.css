@@ -1,25 +1,12 @@
 footer {
-    color:blue;
+    color:white;
     text-align: center;
 
 }
 
-nav {
-    background-color:#DF0334;
-    padding: 10px 0;
-    float: center;
+.nav-item{
+    color:black;
 }
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: right;
-  }
-nav ul li {
-    display: inline-block;
-    margin-right: 25px;
-  }
 
 .container p {
     display: block;
@@ -34,10 +21,6 @@ nav ul li {
     align-items: center;
 }
 
-.galerija{
-    display:flex;
-}
-
 
 .container1 {
     margin-left:50px;
@@ -49,7 +32,57 @@ nav ul li {
 }
 
 
+#navbar img {
+    width: 80px; 
+    float: left; 
+    margin-right: 10px;
+}
+
+.navigation .nav-link {
+    color: white; /* Set text color to white */
+}
+
 
 h1 {
     text-align: center;
+    color:white;
+    font-family: "Roboto", sans-serif;
+}
+
+h2 {
+    text-align: center;
+    color:white;
+}
+
+.pic {
+    width: 500px;
+    display:inline-block;
+    margin-inline-start: 150px;
+}
+
+#home p, #home div {
+    color: white; /* Set text color to white */
+    max-width: 600px; /* Set the maximum width of the text */
+    text-align: justify; /* Center the text horizontally */
+    padding: 20px;
+
+}
+
+
+#headphones p, #headphones div {
+    color: white; /* Set text color to white */
+}
+
+
+#home1 {
+    background: linear-gradient(to bottom right, black, red); /* Define the gradient */
+}
+
+body {
+    background-color: #1a1a1a !important; /* Dark background color */
+    color: white; /* Text color */
+}
+
+#home hr, #headphones hr {
+    border-color: white !important; /* White color for <hr> */
 }
