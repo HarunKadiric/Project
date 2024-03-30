@@ -15,6 +15,20 @@ footer {
 
 }
 
+
+#home1 h1{
+    padding-top:10px;
+    font-size: 86px;
+}
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+
 .container img {
     display:block;
     margin-right: 20px; 
@@ -39,7 +53,7 @@ footer {
 }
 
 .navigation .nav-link {
-    color: white; /* Set text color to white */
+    color: white; 
 }
 
 .card{
@@ -62,13 +76,36 @@ h2 {
     color:white;
 }
 
-.pic {
+.custom-form{
+    max-width:375px;
+}
+
+
+.custom-alert{
+    max-width: 400px;
+    text-align:left;
+    margin-left:20px;
+}
+
+.custom-button{
+    margin-top: 15px;
+    display:inline-block;
+    margin-inline-start: 150px;
+}
+
+.custom-button1{
+    margin-top:15px;
+    display:inline-block;
+    margin-inline-start: 485px;
+}
+
+
+#home .pic {
     width: 500px;
     display:inline-block;
     margin-inline-start: 150px;
     border: 2px solid red;
-
-}
+} 
 
 #home p, #home div {
     color: white; /* Set text color to white */
@@ -86,7 +123,7 @@ body {
 .int {
     text-align: center;
     color:white;
-    padding-top:25px;
+    padding-top:15px;
     font-size:50px;
 }
 
@@ -105,7 +142,7 @@ body {
 
 
 #home1 {
-    background: linear-gradient(to bottom right, black 15%, red 85%); /* Define the gradient */
+    background: linear-gradient(to bottom right, black,rgb(17, 17, 17),rgb(159, 15, 15) 75% ); /* Define the gradient */
 }
 
 body {
@@ -113,6 +150,17 @@ body {
     color: white; /* Text color */
 }
 
-#home hr, #headphones hr {
+#home hr, #headphones hr , #mouse hr , #contact hr{
     border-color: white !important; /* White color for <hr> */
+}
+
+
+
+#contact {
+    color:white;
+}
+
+#contact form{
+    padding-left:20px;
+    padding-bottom: 20px;
 }
