@@ -8,13 +8,6 @@ footer {
     color:black;
 }
 
-.container p {
-    display: block;
-    align-items:center;
-    margin-left:50px;
-
-}
-
 
 #home1 h1{
     padding-top:10px;
@@ -26,24 +19,6 @@ footer {
     font-weight: 400;
     font-style: normal;
   }
-  
-
-
-.container img {
-    display:block;
-    margin-right: 20px; 
-    align-items: center;
-}
-
-
-.container1 {
-    margin-left:50px;
-}
-
-
-.container1 del {
-    margin-left:15px;
-}
 
 
 #navbar img {
@@ -51,6 +26,7 @@ footer {
     float: left; 
     margin-right: 10px;
 }
+
 
 .navigation .nav-link {
     color: white; 
@@ -68,7 +44,6 @@ footer {
 h1 {
     text-align: center;
     color:white;
-    font-family: "Roboto", sans-serif;
 }
 
 h2 {
@@ -108,9 +83,9 @@ h2 {
 } 
 
 #home p, #home div {
-    color: white; /* Set text color to white */
-    max-width: 750px; /* Set the maximum width of the text */
-    text-align: left; /* Center the text horizontally */
+    color: white; 
+    max-width: 750px; 
+    text-align: left;
     padding: 25px;
 
 }
@@ -146,15 +121,13 @@ body {
 }
 
 body {
-    background-color: #1a1a1a !important; /* Dark background color */
-    color: white; /* Text color */
+    background-color: #1a1a1a !important; 
+    color: white;
 }
 
 #home hr, #headphones hr , #mouse hr , #contact hr{
-    border-color: white !important; /* White color for <hr> */
+    border-color: white !important; 
 }
-
-
 
 #contact {
     color:white;
