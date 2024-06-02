@@ -1,0 +1,144 @@
+
+    <form id="contactForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="text" class="form-control" id="date" name="date" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+            <div id="password-strength" class="mt-2"></div>
+        </div>
+        <div class="form-button">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+    
+    <div id="formSuccessToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="3000">
+        <div class="toast-header">
+            <strong class="mr-auto">Success!</strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body">
+            Data saved successfully!
+        </div>
+    </div>
+
+
+    <script>$(document).ready(function() {
+        // initialize date picker
+        $("#date").datepicker({
+            dateFormat: 'mm/dd/yy'
+        });
+    
+        // password strength indicator
+        $("#password").on("keyup", function() {
+            var strength = "Weak";
+            var password = $(this).val();
+            if (password.length >= 8 && /[A-Za-z]/.test(password) && /[0-9]/.test(password)) {
+                strength = "Strong";
+            } else if (password.length >= 6) {
+                strength = "Moderate";
+            }
+            $("#password-strength").text("Password Strength: " + strength);
+            updatePasswordStrengthColor(strength);
+        });
+    
+        // password strength color
+        function updatePasswordStrengthColor(strength) {
+            $("#password-strength").removeClass("text-danger text-warning text-success");
+    
+            if (strength === "Weak") {
+                $("#password-strength").addClass("text-danger");
+            } else if (strength === "Moderate") {
+                $("#password-strength").addClass("text-warning");
+            } else if (strength === "Strong") {
+                $("#password-strength").addClass("text-success");
+            }
+        }
+    
+        // password validation
+        $.validator.addMethod("pwcheck", function(value) {
+            return /[A-Za-z]/.test(value) && /[0-9]/.test(value);
+        });
+    
+        // Form validation 
+        $("#contactForm").validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                date: {
+                    required: true,
+                    date: true
+                },
+                password: {
+                    required: true,
+                    minlength: 8,
+                    pwcheck: true
+                }
+            },
+            messages: {
+                name: {
+                    required: "Please enter your name",
+                    minlength: "Your name must consist of at least 2 characters"
+                },
+                email: {
+                    required: "Please enter your email",
+                    email: "Please enter a valid email address"
+                },
+                date: {
+                    required: "Please select a date",
+                    date: "Please enter a valid date"
+                },
+                password: {
+                    required: "Please provide a password",
+                    minlength: "Your password must be at least 8 characters long",
+                    pwcheck: "Your password must contain at least one letter and one number"
+                }
+            },
+            submitHandler: function(form) {
+                // Handle form submission using AJAX
+                var formData = $(form).serialize();
+                $.ajax({
+                    url: '/project2/data.json',
+                    type: 'POST',
+                    data: formData,
+                    success: function(response) {
+                        console.log("Form submitted successfully:", response);
+                        showSuccessToast(); 
+                        $("#formSuccessMessage").fadeIn();
+                        $("#formErrorMessage").hide();
+                        form.reset(); 
+                        $("#password-strength").empty();
+                    },
+                    error: function(error) {
+                        console.error("Form submission error:", error);
+                        $("#formErrorMessage").fadeIn();
+                        $("#formSuccessMessage").hide();
+                    }
+                });
+            }
+        });
+    
+        // show success toast
+        function showSuccessToast() {
+            var successToast = $("#formSuccessToast");
+            successToast.toast('show'); 
+        }
+    }); </script>

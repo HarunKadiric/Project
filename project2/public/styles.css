@@ -1,0 +1,218 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Default Theme */
+.theme-default {
+    --bg-color: white;
+    --text-color: black;
+    --primary-color: #007BFF;
+}
+
+.theme-default .theme-line{
+    border-color:black;
+}
+
+.theme-default .navbar {
+    background-color: #343a40 !important; 
+}
+
+.theme-default .navbar .navbar-brand,
+.theme-default .navbar .navbar-nav .nav-link {
+    color: white !important; 
+}
+
+.theme-default .card-header {
+    background-color: #343a40;
+    border: none;
+}
+
+.theme-default .card-header button {
+    color: white;
+}
+
+.theme-default .card-body {
+    border-top: 1px solid var(--primary-color);
+    padding: 10px;
+    background-color: white;
+}
+
+
+/* Dark theme */
+.theme-dark {
+    --bg-color: #343a40;
+    --text-color: white;
+    --primary-color: #6c757d;
+}
+
+.theme-dark .theme-line{
+    border-color:white;
+}
+
+.theme-dark .navbar {
+    background-color: #19232d !important;  
+}
+
+.theme-dark .card-header {
+    background-color:#45515d;
+    border: none;
+}
+
+.theme-dark .card-header button {
+    color:white;
+}
+
+.theme-dark .card-body {
+    border-top: 1px solid #6c757d;
+    padding: 10px;
+    background-color: #516172;
+}
+
+.theme-dark .card{
+    border-color: #343a40;
+}
+
+
+
+.theme-green  {
+    --bg-color: #d4edda;
+    --text-color: #155724;
+    --primary-color: #28a745;
+}
+
+.theme-green .theme-line{
+    border-color:white;
+}
+
+.theme-green .navbar {
+    background-color: rgb(126, 232, 126)!important; 
+}
+
+.theme-green .card-header {
+    background-color:rgb(43, 109, 43);
+    border: none;
+}
+
+.theme-green .card-header button {
+    color: #28a745;
+}
+
+.theme-green .card-body {
+    border-top: 1px solid #28a745;
+    padding: 10px;
+    background-color: white;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.navbar,
+.faq-section,
+.modal-content {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: var(--text-color);
+}
+
+.toggle-button {
+    background-color: var(--primary-color);
+}
+
+.img-thumbnail {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.img-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+
+.card-header button {
+    color: var(--primary-color);
+}
+
+.card-body {
+    border-top: 1px solid var(--primary-color);
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.faq-section,
+.modal-content {
+    background-color: var(--bg-color);
+    color: var(--text-color); 
+}
+
+.form-control{
+    max-width: 500px;
+}
+
+.form-group{
+    margin-left: 25px;
+}
+
+.form-button{
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+
+.toast {
+    background-color: #5ae37a; 
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px; 
+    margin-left: auto;
+    z-index: 9999;
+}
+
+/* Custom CSS for Product Gallery and Pagination */
+.card {
+    height: 100%;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit:contain;
+}
+
+.page-item.active .page-link {
+    background-color: #007BFF;
+    border-color: #007BFF;
+}
+
+.page-link {
+    color: #007BFF;
+}
+
+.carousel {
+    max-width: 1150px; 
+    margin: 0 auto; 
+    margin-top: 15px;
+}
+
+.carousel-inner {
+    max-height: 900px; 
+}
+
+.carousel-item {
+    text-align: center; 
+}
+
+.carousel-item img {
+    max-width: 100%; 
+    height: auto; 
+}
+.modal-header , .modal-body{
+    background-color: white;
+}
+
